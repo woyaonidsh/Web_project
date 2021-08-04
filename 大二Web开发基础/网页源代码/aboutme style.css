@@ -1,0 +1,36 @@
+html{
+    text-align: center;
+    font-size: 30px;
+    font-family: SimSun;
+}
+h1{
+    font-size: 60px;
+    margin: 0;
+    color: chocolate;
+    text-shadow: 3px 3px 1px black;
+}
+h2{
+    font-size: 40px;
+    color: coral;
+}
+body{
+    background:url(background.jpg)  no-repeat center center;
+    background-size:cover;
+    background-attachment:fixed;
+    background-color:#CCCCCC;
+ }
+  image{
+      margin: 0 auto;
+  }
+  table{
+    vertical-align: middle;
+    text-align: center; 
+  }
+ul{
+    margin: 0 auto;
+    width:230px;
+    height:25px;
+}
+li{
+    float: center;
+}

@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="tubiao.ico" type="image/x-icon" />
+    <title>online test</title>
+    <style>
+        h1 
+        {
+            color: darkorange;
+            text-align: center;
+            font-size: xx-large;
+        }
+        body 
+        {
+            background: url(aa.png) no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-color: #CCCCCC;
+            text-align: center;
+        }
+    </style>
+    <script src="score and time.js"></script>
+</head>
+
+<body onload="startTime() ; qishi();">
+    <div style="font-size: 50px ; color: darkorange">Welcome to the test page</div>
+    <div style="margin:0 auto;width:200px;">
+        <div style="color: red ; font-size: 20px"><strong>当前时间：</strong></div>
+        <div style="font-size: 30px" id='txt'></div>
+        <div style="font-size: 40px ; color:crimson" id='wenhou'></div>
+    </div><br>
+    <form method="POST" action="test.asp" name="s_name">
+        <fieldset style="border-width: 10px ; width: 1300px ; margin: 0 auto;float: none">
+        <fieldset style="border-width: 7px">
+            <legend style="font-size:x-large"><strong>Contact Information</strong>>>></legend>
+            <label style="color: goldenrod">你的名字：<input type="text" name="yourname" size="5" /></label><br>
+            <label style="color: goldenrod">你的性别：<input type="radio" name="sex">男<input type="radio"
+                    name="sex">女</label><br>
+        </fieldset>  
+        <br>
+        <fieldset style="border-width: 7px">
+            <legend style="font-size: x-large"><strong>Prompt Message</strong>>>></legend>
+            <h2 style="color: darkred">考前提示：</h2>
+            <h3 style="color: darkred">
+                “湿垃圾”——猪能吃的<br>
+                “干垃圾”——猪都不要吃的<br>
+                “有害垃圾”——猪吃了能死的<br>
+                “可回收物”——卖了钱可以买猪的<br>
+            </h3>
+            <img src="laji.png" alt=垃圾分类图><br>
+        </fieldset>  
+        <fieldset style="border-width: 7px">
+            <legend style="font-size: x-large"><strong>Single choice</strong>>>></legend>
+            <br>
+            <p style="font-size: x-large">1.下列哪个属于干垃圾？</p>
+            <label><input type="radio" name="aa" value=10>A.松木猫砂</label> <label><input type="radio" name="aa"
+                    value=0>B.狗粮</label><br><br>
+            <p style="font-size: x-large">2.面膜属于以下哪种垃圾？</p>
+            <label><input type="radio" name="bb" value=0>A.湿垃圾</label> <label><input type="radio" name="bb"
+                    value=10>B.干垃圾</label>
+            <label><input type="radio" name="bb" value=0>C.有害垃圾</label> <label><input type="radio" name="bb"
+                    value=0>D.可回收垃圾</label><br><br>
+            <p style="font-size: x-large">3.过期的感冒药属于以下哪种垃圾？</p>
+            <label><input type="radio" name="cc" value=0>A.湿垃圾</label> <label><input type="radio" name="cc"
+                    value=0>B.干垃圾</label>
+            <label><input type="radio" name="cc" value=10>C.有害垃圾</label> <label><input type="radio" name="cc"
+                    value=0>D.可回收垃圾</label><br><br>
+            <p style="font-size: x-large">4.废弃的吸铁石属于以下哪种垃圾？</p>
+            <label><input type="radio" name="dd" value=0>A.湿垃圾</label> <label><input type="radio" name="dd"
+                    value=0>B.干垃圾</label>
+            <label><input type="radio" name="dd" value=0>C.有害垃圾</label> <label><input type="radio" name="dd"
+                    value=10>D.可回收垃圾</label><br><br>
+            <p style="font-size: x-large">5.牙齿属于以下哪种垃圾？</p>
+            <label><input type="radio" name="ee" value=0>A.湿垃圾</label> <label><input type="radio" name="ee"
+                    value=10>B.干垃圾</label>
+            <label><input type="radio" name="ee" value=0>C.有害垃圾</label> <label><input type="radio" name="ee"
+                    value=0>D.可回收垃圾</label><br><br>
+            <p style="font-size: x-large">6.卫生间用纸属于以下哪种垃圾？</p>
+            <label><input type="radio" name="ff" value=0>A.湿垃圾</label> <label><input type="radio" name="ff"
+                    value=10>B.干垃圾</label>
+            <label><input type="radio" name="ff" value=0>C.有害垃圾</label> <label><input type="radio" name="ff"
+                    value=0>D.可回收垃圾</label><br><br>
+        </fieldset>
+        <fieldset style="border-width: 7px">
+            <legend style="font-size: x-large"><strong>Multiple choices</strong>>>></legend>
+            <br>
+            <p style="font-size: x-large">1.以下哪些不属于干垃圾？（多选）</p>
+            <label><input type="checkbox" name="gg" value=0>A.冰棒棍</label> <label><input type="checkbox" name="gg"
+                    value=5>B.牙刷</label>
+            <label><input type="checkbox" name="gg" value=0>C.蜡笔</label> <label><input type="checkbox" name="gg"
+                    value=5>D.电线</label><br><br>
+            <p style="font-size: x-large">2.以下哪些属于干垃圾？（多选）</p>
+            <label><input type="checkbox" name="hh" value=2.5>A.袋泡茶</label> <label><input type="checkbox" name="hh"
+                    value=2.5>B.豆浆袋</label>
+            <label><input type="checkbox" name="hh" value=2.5>C.粉底</label> <label><input type="checkbox" name="hh"
+                    value=2.5>D.电蚊香片</label><br><br>
+            <p style="font-size: x-large">3.以下哪些属于可回收垃圾？（多选）</p>
+            <label><input type="checkbox" name="ii" value=5>A.牛奶盒</label> <label><input type="checkbox" name="ii"
+                    value=0>B.电池</label>
+            <label><input type="checkbox" name="ii" value=5>C.啤酒瓶</label> <label><input type="checkbox" name="ii"
+                    value=0>D.医用手套</label><br><br>
+            <p style="font-size: x-large">4.以下哪些属于可回收垃圾？（多选）</p>
+            <label><input type="checkbox" name="jj" value=5>A.砧板</label> <label><input type="checkbox" name="jj"
+                    value=0>B.贝壳</label>
+            <label><input type="checkbox" name="jj" value=5>C.旧玩偶</label> <label><input type="checkbox" name="jj"
+                    value=0>D.饮料瓶</label><br><br>
+        </fieldset><br>
+        <div style="margin:0 auto;width:200px;"> 
+            <input type="submit" value="OK" onclick="score()" style="font-size: x-large">
+            <input type="hidden" value="" name="fenshu" id="shu">
+        </div>
+        </fieldset>
+    </form><br>
+</body>
+
+</html>
